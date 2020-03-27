@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Who do you think is the oldest?</h1>
+    <p>You must have to guess right in the first two tries</p>
+    <button id="right">Maxim</button>
+    <button id="wrong1">Alexander</button>
+    <button id="wrong2">Mia</button>
+    <button id="object">Click here to see object</button>
+    <button id="hideObejct">Hide Object</button>
+    <p id="twoLeft">One try</p>
+    <p id="Failed">Sorry you did not participate for the final</p>
+    <p id="Success">You participatet for the final</p>
+    <p id="object-show">
+      const personOne = { firstName: "Maxim", lastName: "Vasilij", age: "50" };
+      const personTwo = { firstName: "Alexander", lastName: "Smith", age: "35"
+      }; const personThree = { firstName: "Mia", lastName: "Ibsens", age: "25"
+      };
+    </p>
+    <script>
+      const rightPerson = document.getElementById("right");
+      const wrongPersonOne = document.getElementById("wrong1");
+      const wrongPersonTwo = document.getElementById("wrong2");
+      const oneTry = document.getElementById("oneLeft");
+      const twoTry = document.getElementById("twoLeft");
+      const Failed = document.getElementById("Failed");
+      const Success = document.getElementById("Success");
+      const object = document.getElementById("object");
+      const showObject = document.getElementById("object-show");
+      const hideObject = document.getElementById("hideObejct");
+
+      hideObject.addEventListener("click", function() {
+        showObject.style.display = "none";
+      });
+
+      object.addEventListener("click", function() {
+        showObject.style.display = "block";
+      });
+
+      rightPerson.addEventListener("click", function() {
+        Success.style.display = "block";
+        if (rightPerson) {
+          alert("success");
+        }
+      });
+
+      wrongPersonOne.addEventListener("click", function() {
+        Failed.style.display = "block";
+        if (rightPerson) {
+          alert("false");
+        }
+      });
+
+      wrongPersonTwo.addEventListener("click", function() {
+        Failed.style.display = "block";
+        if (rightPerson) {
+          alert("false");
+        }
+      });
+
+      const personOne = {
+        firstName: "Maxim",
+        lastName: "Vasilij",
+        age: "50"
+      };
+
+      const personTwo = {
+        firstName: "Alexander",
+        lastName: "Smith",
+        age: "35"
+      };
+
+      const personThree = {
+        firstName: "Mia",
+        lastName: "Ibsens",
+        age: "25"
+      };
+    </script>
+  </body>
+</html>
